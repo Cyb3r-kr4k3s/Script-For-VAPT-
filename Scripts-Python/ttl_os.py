@@ -23,12 +23,12 @@ def get_ttl(ip_address):
 
 def get_os(ttl):
     ttl = int(ttl)
-    if ttl <= 64:
-        return "Linux"
-    elif ttl <= 128:
+    if ttl == 128:
         return "Windows"
+    elif ttl == 64:
+        return "Linux/macOS/FreeBSD/Juniper Routers/HP-UX/Apple iOS/Android OS"
     elif ttl == 255:
-        return "iOS/Cisco"
+        return "Cisco Routers"
     elif ttl == 254:
         return "Solaris/AIX"
     else:
