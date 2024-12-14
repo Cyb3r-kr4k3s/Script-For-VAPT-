@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 # coding: utf-8
 
-# TimeToLive 
-
+# Identifies the OS and Device Network through TimeToLive (TTL)
 import re
 import sys
 import subprocess
 from tabulate import tabulate
 from termcolor import colored
+import pyfiglet
 
 def get_ttl(ip_address):
     try:
@@ -46,6 +46,10 @@ if __name__ == '__main__':
     ip_address = sys.argv[1]
     ttl = get_ttl(ip_address)
     os_name = get_os(ttl)
+
+    banner = pyfiglet.figlet_format("Dev by Cyb3r-kr4k3s", font="slant")
+    colored_banner = colored(banner, "green")
+    print(colored_banner)
 
     print(colored("\nIdentified Time To Live\n", "green", attrs=["bold"]))
 
