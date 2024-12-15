@@ -40,7 +40,7 @@ async def main():
     timeout = float(input("Enter the timeout per port (in seconds): "))
 
     ports = process_range(port_range)
-    print(f"\n[*] Escaneando host {host} (Puertos: {port_range})\n")
+    print(f"\n[*] Scanning Host {host} (Ports: {port_range})\n")
 
     semaphore = asyncio.Semaphore(threads)
     tasks = [bound_scan(semaphore, host, port, timeout) for port in ports]
