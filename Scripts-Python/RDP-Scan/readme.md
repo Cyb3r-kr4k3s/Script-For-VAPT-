@@ -13,3 +13,9 @@ So, the final command will be:
 `pip install requests tabulate colorama pyfiglet termcolor`
 
 Just copy and paste this into your terminal or command prompt, and it should install the necessary packages for you.
+
+
+Example
+
+![image](https://github.com/user-attachments/assets/c2a4d30a-a87e-4c51-a95a-5ce7d1cbee00)
+
